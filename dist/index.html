@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Holiday Countdown</title>
+        <link rel="stylesheet" href="css/style.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas|Raleway&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/77623b1dd4.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="snow layer1 a"></div>
+            <div class="snow layer1"></div>
+            <div class="snow layer2 a"></div>
+            <div class="snow layer2"></div>
+            <div class="snow layer3 a"></div>
+            <div class="snow layer3"></div>
+            <nav class="navbar bg-dark">
+                <h1>
+                    <a href="dashboard.html"> <i class="fas fa-snowman"></i> Holiday Countdown </a>
+                </h1>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <section class="landing">
+                <div class="dark-overlay">
+                    <div class="landing-inner">
+                        <h1 class="x-large countdown-text">Holiday Countdown</h1>
+                        <ul id="timer">
+                            <li><span id="days"></span>Days</li>
+                            <li><span id="hours"></span>Hours</li>
+                            <li><span id="minutes"></span>Minutes</li>
+                            <li><span id="seconds"></span>Seconds</li>
+                        </ul>
+                        <p class="lead">Set up a user profile and create lists</p>
+                        <div class="buttons">
+                            <a href="register.html" class="btn btn-primary">Sign Up</a>
+                            <a href="login.html" class="btn btn-primary">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="js/timer.js"></script>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+@import 'config';
+@import 'utilities';
+@import 'form';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway';
+}
+
+// Snow background
+.wrapper {
+    width:100vw;
+    height:100vh;
+    background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
+}
+$s1:"";
+$s2:"";
+$s3:"";
+@for $i from 1 through 400 {
+    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    @if $i < 400 {
+        $s1: $s1 + ",";
+        $s2: $s2 + ",";
+        $s3: $s3 + ",";
+    }
+}
+.snow {
+    border-radius: 50%;
+    opacity: 0.8;
+    position: absolute;
+    top:-100vh;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.layer1 {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter:blur(1.5px);
+    box-shadow: #{$s1};
+    animation-duration: 6s;
+}
+.layer1.a {
+    animation-delay: -3s;
+}
+.layer2 {
+    width: 1.2rem;
+    height: 1.2rem;
+    filter:blur(3px);
+    box-shadow: #{$s2};
+    animation-duration: 8s;
+}
+.layer2.a {
+    animation-delay: -4s;
+}
+.layer3 {
+    width: 0.8rem;
+    height: 0.8rem;
+    filter:blur(6px);
+    box-shadow: #{$s3};
+    animation-duration: 10s;
+}
+.layer3.a {
+    animation-delay: -5s;
+}
+@keyframes fall {
+    100% {transform: translateY(200vh); }
+}
+
+a {
+    text-decoration: none;
+    color: $light-color;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+// Navbar
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    border-bottom: solid 1px $light-color;
+    opacity: 0.9;
+
+    ul {
+        display: flex;
+    }
+    a  {
+        color: $light-color;
+        padding: 0.45rem;
+        margin: 0 0.25rem;
+        
+        &:hover {
+            color: $light-color;
+        }
+    }
+
+}
+
+// Landing
+.landing {
+    position: relative;
+    background: url('../img/skyscraper-silhouette.png') no-repeat center/cover;
+    height: 100vh;
+
+    &-inner {
+        color: #F4F2F3;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+// Profile Page
+.profile {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+// Timer
+#timer {
+    li {
+        display: inline-block;
+        font-size: 1.5em;
+        list-style-type: none;
+        padding: 1rem;
+        text-transform: uppercase;
+        background: #ecf0f121;
+    }
+    
+    li span {
+        display: block;
+        font-size: 4.1rem;
+    }
+}
+    
+
+
+
