@@ -1,7 +1,7 @@
 {
   "name": "holiday-countdown",
   "version": "1.0.0",
-  "description": "A christmas holiday countdown timer.",
+  "description": "A Christmas holiday countdown timer.",
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d dist"
