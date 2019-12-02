@@ -1,0 +1,22 @@
+{
+  "name": "holiday-countdown",
+  "version": "1.0.0",
+  "description": "A christmas holiday countdown timer.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carltonstith/holiday-countdown.git"
+  },
+  "author": "Carlton Stith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carltonstith/holiday-countdown/issues"
+  },
+  "homepage": "https://github.com/carltonstith/holiday-countdown#readme",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
