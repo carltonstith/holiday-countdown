@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/carltonstith/holiday-countdown/issues"
   },
-  "homepage": "https://github.com/carltonstith/holiday-countdown#readme",
+  "homepage": "https://carltonstith.github.io/holiday-countdown/",
   "dependencies": {
     "gh-pages": "^2.1.1"
   }
