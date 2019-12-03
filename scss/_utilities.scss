@@ -101,9 +101,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.1);
+    // background-color: rgba(0,0,0,0.1);
+    background-color: rgba(138, 187, 214, 0.9);
 }
 
 .countdown-text {
     font-family: 'Mountains of Christmas', cursive;
+    margin: 6px 12px;
+    color: #fff;
+    text-shadow: 0 2px 0 rgba(0,0,0,.25);
+    transform: rotateZ(-3deg) skew(-4deg);
+    font-weight: 400;
 }

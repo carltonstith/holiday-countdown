@@ -13,66 +13,66 @@ body {
 }
 
 // Snow background
-.wrapper {
-    width:100vw;
-    height:100vh;
-    background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
-}
-$s1:"";
-$s2:"";
-$s3:"";
-@for $i from 1 through 400 {
-    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
-    $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
-    $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
-    @if $i < 400 {
-        $s1: $s1 + ",";
-        $s2: $s2 + ",";
-        $s3: $s3 + ",";
-    }
-}
-.snow {
-    border-radius: 50%;
-    opacity: 0.8;
-    position: absolute;
-    top:-100vh;
-    animation-name: fall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-.layer1 {
-    width: 1.5rem;
-    height: 1.5rem;
-    filter:blur(1.5px);
-    box-shadow: #{$s1};
-    animation-duration: 6s;
-}
-.layer1.a {
-    animation-delay: -3s;
-}
-.layer2 {
-    width: 1.2rem;
-    height: 1.2rem;
-    filter:blur(3px);
-    box-shadow: #{$s2};
-    animation-duration: 8s;
-}
-.layer2.a {
-    animation-delay: -4s;
-}
-.layer3 {
-    width: 0.8rem;
-    height: 0.8rem;
-    filter:blur(6px);
-    box-shadow: #{$s3};
-    animation-duration: 10s;
-}
-.layer3.a {
-    animation-delay: -5s;
-}
-@keyframes fall {
-    100% {transform: translateY(200vh); }
-}
+// .wrapper {
+//     width:100vw;
+//     height:100vh;
+//     background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
+// }
+// $s1:"";
+// $s2:"";
+// $s3:"";
+// @for $i from 1 through 400 {
+//     $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+//     $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+//     $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+//     @if $i < 400 {
+//         $s1: $s1 + ",";
+//         $s2: $s2 + ",";
+//         $s3: $s3 + ",";
+//     }
+// }
+// .snow {
+//     border-radius: 50%;
+//     opacity: 0.8;
+//     position: absolute;
+//     top:-100vh;
+//     animation-name: fall;
+//     animation-timing-function: linear;
+//     animation-iteration-count: infinite;
+// }
+// .layer1 {
+//     width: 1.5rem;
+//     height: 1.5rem;
+//     filter:blur(1.5px);
+//     box-shadow: #{$s1};
+//     animation-duration: 6s;
+// }
+// .layer1.a {
+//     animation-delay: -3s;
+// }
+// .layer2 {
+//     width: 1.2rem;
+//     height: 1.2rem;
+//     filter:blur(3px);
+//     box-shadow: #{$s2};
+//     animation-duration: 8s;
+// }
+// .layer2.a {
+//     animation-delay: -4s;
+// }
+// .layer3 {
+//     width: 0.8rem;
+//     height: 0.8rem;
+//     filter:blur(6px);
+//     box-shadow: #{$s3};
+//     animation-duration: 10s;
+// }
+// .layer3.a {
+//     animation-delay: -5s;
+// }
+// @keyframes fall {
+//     100% {transform: translateY(200vh); }
+// }
 
 a {
     text-decoration: none;
@@ -110,6 +110,7 @@ img {
         
         &:hover {
             color: $light-color;
+            text-decoration: none;
         }
     }
 
@@ -164,116 +165,8 @@ img {
 }
 
 // Dashoard 
-.listWrapper {
-    width: 50vw;
-    height: 50vh;
-    background: radial-gradient(farthest-corner at 30vw 20vh, #a2a2a2 1%, #484848 100%);
-    // padding: 2rem 0;
-    margin: 2rem 0;
-
-    svg {
-        width: 64px;
-        height: 64px;
-      }
-      
-      .todo-list {
-        list-style: none;
-        margin-bottom: 20px;
-      }
-      
-      .todo-item {
-        margin-bottom: 10px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      
-      .todo-item span {
-        flex-grow: 1;
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 22px;
-      }
-      
-      .done span {
-        text-decoration: line-through;
-      }
-      
-      input[type="checkbox"] {
-        display: none;
-      }
-      
-      .tick {
-        width: 30px;
-        height: 30px;
-        border: 3px solid #333;
-        border-radius: 50%;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
-      
-      .tick::before {
-        content: '✓';
-        font-size: 20px;
-        display: none;
-      }
-      
-      .done .tick::before {
-        display: inline;
-      }
-      
-      .delete-todo {
-        border: none;
-        background-color: transparent;
-        outline: none;
-        cursor: pointer;
-      }
-      
-      .delete-todo svg {
-        width: 30px;
-        height: 30px;
-        pointer-events: none;
-      }
-      
-      form {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-      }
-      
-      input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        border-radius: 4px;
-        border: 3px solid #333;
-      }
-
-      .empty-state {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        display: none;
-      }
-
-      .empty-state__title, .empty-state__description {
-        margin-bottom: 20px;
-      }
-
-      .checklist-icon {
-        margin-bottom: 20px;
-      }
-
-      .todo-list:empty {
-        display: none;
-      }
-
-      .todo-list:empty + .empty-state {
-        display: flex;
-      }
-
+th, td {
+  color: #F4F2F3;
 }
 
     
