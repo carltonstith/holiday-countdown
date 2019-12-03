@@ -6,17 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Register - Holiday Countdown</title>
         <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas|Raleway&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/77623b1dd4.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="wrapper">
-            <!-- <div class="snow layer1 a"></div>
-            <div class="snow layer1"></div>
-            <div class="snow layer2 a"></div>
-            <div class="snow layer2"></div>
-            <div class="snow layer3 a"></div>
-            <div class="snow layer3"></div> -->
             <nav class="navbar bg-dark">
                 <h1>
                     <a href="dashboard.html"> <i class="fas fa-snowman"></i> Holiday Countdown </a>
@@ -28,35 +23,42 @@
                 </ul>
             </nav>
             <section class="landing">
-                    <div class="snow layer1 a"></div>
-                    <div class="snow layer1"></div>
-                    <div class="snow layer2 a"></div>
-                    <div class="snow layer2"></div>
-                    <div class="snow layer3 a"></div>
-                    <div class="snow layer3"></div>
+                <div class="snow layer1 a"></div>
+                <div class="snow layer1"></div>
+                <div class="snow layer2 a"></div>
+                <div class="snow layer2"></div>
+                <div class="snow layer3 a"></div>
+                <div class="snow layer3"></div>
                 <div class="dark-overlay">
                     <div class="container landing-inner">
 
                         <!-- Alert -->
-                        <div class="alert alert-danger">
+                        <!-- <div class="alert alert-danger">
                             Invalid Credentials
-                        </div>
+                        </div> -->
+                        <div id="message"></div>
 
-                        <h1 class="large text-light">Sign In</h1>
+                        <h1 class="large text-light">Log In</h1>
                         <p class="lead"><i class="fas fa-user"></i>Sign Into Your Account</p>
-                        <form action="dashboard.html" class="form">
+
+                        <form class="form" id="signInForm">
                             <div class="form-group">
-                                <input type="email" placeholder="Email Address" required>
+                                <input type="email" placeholder="Email Address" id="username" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" placeholder="Password" minlength="6">
+                                <input type="password" placeholder="Password" minlength="6" id="password" required>
                             </div>
-                            <input type="submit" value="Login" class="btn btn-primary">
+                            <input type="button" value="Login" class="btn btn-primary btn-block" id="submit" onclick="validateAndSignIn()">
                         </form>
                         <p class="my-1">Forgot your password? <a href="login.html">Reset your password</a></p>
+                        <div class="hint">
+                            <small>Email: admin@countdown.com</small>|
+                            <small>Password: password</small>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
+        <script src="js/login.js"></script>
     </body>
 </html>
