@@ -1,6 +1,8 @@
 @import 'config';
 @import 'utilities';
 @import 'form';
+// @import 'bootswatch';
+// @import 'variables';
 
 * {
     box-sizing: border-box;
@@ -9,7 +11,7 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 // Snow background
@@ -83,10 +85,6 @@ ul {
     list-style: none;
 }
 
-img {
-    width: 100%;
-}
-
 // Navbar
 .navbar {
     display: flex;
@@ -97,7 +95,7 @@ img {
     z-index: 1;
     width: 100%;
     top: 0;
-    border-bottom: solid 1px $light-color;
+    // border-bottom: solid 1px $light-color;
     opacity: 0.9;
 
     ul {
@@ -112,6 +110,10 @@ img {
             color: $light-color;
             text-decoration: none;
         }
+    }
+    
+    li a {
+        font-size: 1rem;
     }
 
 }
@@ -146,8 +148,14 @@ img {
     line-height: 1.8;
     margin-bottom: 1rem;
 }
+#profile-img {
+    width: 40%;
+}
+li.list-group-item {
+    color: red;
+}
 
-// Timer
+// Index Page - Timer
 #timer {
     li {
         display: inline-block;
@@ -168,6 +176,7 @@ img {
 th, td {
   color: #F4F2F3;
 }
+
 
     
 
