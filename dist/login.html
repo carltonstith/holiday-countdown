@@ -28,6 +28,9 @@
                             <li class="nav-item">
                               <a class="nav-link" href="login.html">Login</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Logout</a>
+                            </li>
                           </ul>
                         </div>
                 </nav>
@@ -52,12 +55,12 @@
 
                         <form class="form" id="signInForm">
                             <div class="form-group">
-                                <input type="email" placeholder="Email Address" id="username" required>
+                                <input type="text" placeholder="Username" id="username" required>
                             </div>
                             <div class="form-group">
                                 <input type="password" placeholder="Password" minlength="6" id="password" required>
                             </div>
-                                <input type="button" value="Login" class="btn btn-primary btn-block" id="submit" onclick="validateAndSignIn()">
+                                <input type="button" value="Login" class="btn btn-primary btn-block" id="submit">
                         </form>
                         <p class="my-1">Forgot your password? <a href="login.html">Reset your password</a></p>
                         <div class="hint">

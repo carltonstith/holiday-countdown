@@ -4,7 +4,12 @@
   "description": "A Christmas holiday countdown timer.",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "client-install": "npm install --prefix client",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run serve --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +22,20 @@
   },
   "homepage": "https://carltonstith.github.io/holiday-countdown/",
   "dependencies": {
-    "gh-pages": "^2.1.1"
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "gh-pages": "^2.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.13",
+    "nodemon": "^2.0.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0"
   }
 }
